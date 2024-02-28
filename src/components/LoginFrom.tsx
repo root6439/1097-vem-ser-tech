@@ -15,6 +15,7 @@ const LoginForm = () => {
     );
 
     if (user) {
+      storage.set("user_logged", user);
       // TODO implementar redirect
     } else {
       // TODO implementar mensagem de erro
