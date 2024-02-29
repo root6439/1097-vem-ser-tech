@@ -4,14 +4,13 @@ import { UserEvaluation } from "../shared/models/UserEvaluation";
 import Storage from "../shared/utils/Storage";
 
 const Evaluation = () => {
-  let filmId: number = 1;
+  let filmId: number;
   const storage = new Storage();
   const [note, setNote] = useState("");
   const [review, setReview] = useState("");
   const userEvaluation =
     (storage.get("user_evaluation") as UserEvaluation[]) ?? [];
   const userLogged = storage.get("user_logged") as User;
-
   const userAlreadyEvaluate = userEvaluation.find(
     (aux) => aux.userId == userLogged.id
   );
