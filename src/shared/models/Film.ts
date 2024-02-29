@@ -3,7 +3,7 @@ export class Film {
   name: string;
   category: string;
   url: string;
-  videoUrl: string;
+  videoUrl?: string;
   description: string;
   illustrativeImg: string;
 }
